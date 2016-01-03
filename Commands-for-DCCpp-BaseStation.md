@@ -26,7 +26,8 @@ The [DCC++ Base Station](https://github.com/DccPlusPlus/BaseStation) is listenin
   * Returns: **< e nTurnouts nSensors >**
  * **< e > Lower Case e**: Command to **Erase ALL (turnouts, sensors, and outputs)** definitions from EEPROM 
   * Returns: **< 0 >** EEPROM Empty 
- * **(There is NO Un-Delete)**  
+ * **(There is NO Un-Delete)** 
+ * **< D > Upper Case D**: Please See [Diagnostics-< D >-Command Page](https://github.com/DccPlusPlus/BaseStation/wiki/Diagnostics---D---Command)  
  * There are a few other DeBugging commands in SerialCommand.cpp that should only be used by advanced users (Potentially Harmful if not used correctly).
 
 
