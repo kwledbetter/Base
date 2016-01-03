@@ -62,7 +62,8 @@ If the command was successful the serial monitor should reply with : **<T 1 20 1
  * F0-F28 (F0 is sometimes called FL)  
  * NOTE: setting requests are transmitted directly to mobile engine decoder   
  * current state of engine functions is not stored by the DCC++ BaseStation  
- * All functions Groups get set all at once per NMRA DCC standards
+ * All functions Groups get set all at once per NMRA DCC standards  
+
 #####To set functions **F0-F4** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**#####
  *  < = Begin DCC++ command
  *  f = (lower case f) This command is for a CAB,s function ie: Lights, horn, bell  
@@ -106,7 +107,8 @@ Breakdown for this example **<f 3265 144>**
   * Add 8 for F8 ON
   * 176 Alone Turns OFF **F5-F8**
  * BYTE2:  omitted
- * > = End DCC++ command
+ * > = End DCC++ command  
+
 #####To set functions **F9-F12** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**#####
  *  < = Begin DCC++ command
  *  f = (lower case f) This command is for a CAB,s function.
@@ -118,7 +120,8 @@ Breakdown for this example **<f 3265 144>**
   * Add 8 for F12 ON
   * 160 Alone Turns OFF **F9-F12**
  * BYTE2:  omitted
- * > = End DCC++ command
+ * > = End DCC++ command  
+
 #####To set functions **F13-F20** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**#####
  *  < = Begin DCC++ command
  *  f = (lower case f) This command is for a CAB,s function.
@@ -134,7 +137,8 @@ Breakdown for this example **<f 3265 144>**
   * Add 64 for F19 ON
   * Add 128 for F20 ON
   * 0 Alone Turns OFF **F13-F20**
- * > = End DCC++ command
+ * > = End DCC++ command  
+
 #####To set functions **F21-F28** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**#####
  *  < = Begin DCC++ command
  *  f = (lower case f) This command is for a CAB,s function.
@@ -150,7 +154,8 @@ Breakdown for this example **<f 3265 144>**
   * Add 64 for F27 ON
   * Add 128 for F28 ON
   * 0 Alone Turns OFF **F21-F28**
- * > = End DCC++ command
+ * > = End DCC++ command  
+
 #####Returns: NONE#####
  * CAB Functions do not have a Return
  * CAB **Functions** do not get stored in the DCC++ BaseStation
