@@ -3,7 +3,7 @@
 Command Line from Serial Monitor or Software like [DCC++ Controller](https://github.com/DccPlusPlus/Controller) or [JMRI](http://www.jmri.org/)  
 If you are testing your setup or writing your own control program these commands are what the [DCC++ Base Station](https://github.com/DccPlusPlus/BaseStation) is looking for and in some cases replying to you.
 
-It is recommended you download the latest version of the the [Arduino IDE](https://www.arduino.cc/en/Main/Software) and the [DCC++ Base Station](https://github.com/DccPlusPlus/BaseStation) Software from [GitHub](https://github.com/). If your new to [DCC++](https://github.com/DccPlusPlus?tab=repositories) I suggest you look at the Getting Started with DCC++ Hardware page (Coming Soon).  
+It is recommended you download the latest version of the the [Arduino IDE](https://www.arduino.cc/en/Main/Software) and the [DCC++ Base Station](https://github.com/DccPlusPlus/BaseStation) Software from [GitHub](https://github.com/). If your new to [DCC++](https://github.com/DccPlusPlus?tab=repositories) I suggest you look at the [Getting Started With DCC++ Hardware](https://github.com/DccPlusPlus/BaseStation/wiki/Getting-Started-With-DCC---Hardware) page.  
 
 The [DCC++ Base Station](https://github.com/DccPlusPlus/BaseStation) is listening for commands in the following format(s):
 
