@@ -25,7 +25,7 @@ Inside [The DCC Plus Plus repository](https://github.com/DccPlusPlus?tab=reposit
   
 - [This DCC Plus Plus repository](https://github.com/DccPlusPlus?tab=repositories)  
 - [DCC++ YouTube channel](https://www.youtube.com/channel/UCJmvQx-fe0OMAIH-_g-_rZw)  
-- [DCC++ Discussion on Trainboard](http://www.trainboard.com/highball/index.php?threads/introducing-dcc-a-complete-open-source-dcc-station-and-interface.84800/)  
+- [DCC++ Discussion on Trainboard](http://www.trainboard.com/highball/index.php?forums/dcc.177/)  
 - [NMRA DCC Standards](http://www.nmra.org/index-nmra-standards-and-recommended-practices)  
 - [Arduino](http://www.arduino.cc/)  
 - [Processing](http://processing.org/)  
