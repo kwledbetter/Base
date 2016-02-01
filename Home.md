@@ -21,7 +21,7 @@
  - This [DCC++ WIKI](https://github.com/DccPlusPlus/BaseStation/wiki)  
  - [DCC++ Home Page](https://sites.google.com/site/dccppsite/)  
  - [DCC++ YouTube channel](https://www.youtube.com/channel/UCJmvQx-fe0OMAIH-_g-_rZw)  
- - [DCC++ Discussion on Trainboard](http://www.trainboard.com/highball/index.php?threads/introducing-dcc-a-complete-open-source-dcc-station-and-interface.84800/)  
+ - [DCC++ Discussions on Trainboard](http://www.trainboard.com/highball/index.php?forums/dcc.177/)  
  - - - 
  - [NMRA](http://www.nmra.org) National Model Railroad Association  
  - [Arduino](http://www.arduino.cc/) Open-source Hardware  
