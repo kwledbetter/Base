@@ -7,7 +7,7 @@ It is recommended you download the latest version of the the [Arduino IDE](https
 
 The [DCC++ Base Station](https://github.com/DccPlusPlus/BaseStation) is listening for commands in the following format(s):
 
-###SINGLE LETTER COMMANDS###
+### SINGLE LETTER COMMANDS ###
  * **< s > Lower Case s**: DCC++ BaseStation Status 
   * Returns: Track power status,Throttle status, Turn-out status, and a version number.
  * **< 0 > Number Zero**: Turn Power **OFF** to tracks (Both Main & Programming). 
@@ -32,9 +32,9 @@ The [DCC++ Base Station](https://github.com/DccPlusPlus/BaseStation) is listenin
 
 
 
-###Engine Decoder (CAB) Operation Commands###
+### Engine Decoder (CAB) Operation Commands ###
 
-####THROTTLE####
+#### THROTTLE ####
 
 **The CAB throttle format**  is **< t REGISTER CAB SPEED DIRECTION>**.  
 
@@ -55,7 +55,7 @@ If the command was successful the serial monitor should reply with : **<T 1 20 1
 **"1"** = forward direction  
 **">"** = End DCC++ command
 
-####CAB FUNCTIONS####
+#### CAB FUNCTIONS ####
 
 **The CAB Functions format** is **<f CAB BYTE1 [BYTE2]>**  
 
@@ -97,7 +97,7 @@ Breakdown for this example **<f 3265 144>**
 **"144"** = Turn on headlight  
 **">"** = End DCC++ command  
 
-#####To set functions **F5-F8** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**#####
+##### To set functions **F5-F8** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>** #####
  * < = Begin DCC++ command
  * f = (lower case f) This command is for a CAB,s function.
  * BYTE1:  176 + F5\*1 + F6\*2 + F7\*4 + F8\*8
@@ -110,7 +110,7 @@ Breakdown for this example **<f 3265 144>**
  * BYTE2:  omitted
  * > = End DCC++ command  
 
-#####To set functions **F9-F12** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**#####
+##### To set functions **F9-F12** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>** #####
  *  < = Begin DCC++ command
  *  f = (lower case f) This command is for a CAB,s function.
  * BYTE1:  160 + F9\*1 +F10\*2 + F11\*4 + F12\*8
@@ -123,7 +123,7 @@ Breakdown for this example **<f 3265 144>**
  * BYTE2:  omitted
  * > = End DCC++ command  
 
-#####To set functions **F13-F20** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**#####
+##### To set functions **F13-F20** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>** #####
  *  < = Begin DCC++ command
  *  f = (lower case f) This command is for a CAB,s function.
  * BYTE1: 222 
@@ -140,7 +140,7 @@ Breakdown for this example **<f 3265 144>**
   * 0 Alone Turns OFF **F13-F20**
  * > = End DCC++ command  
 
-#####To set functions **F21-F28** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**#####
+##### To set functions **F21-F28** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>** #####
  *  < = Begin DCC++ command
  *  f = (lower case f) This command is for a CAB,s function.
  * BYTE1: 223
@@ -157,12 +157,12 @@ Breakdown for this example **<f 3265 144>**
   * 0 Alone Turns OFF **F21-F28**
  * > = End DCC++ command  
 
-#####Returns: NONE#####
+##### Returns: NONE #####
  * CAB Functions do not have a Return
  * CAB **Functions** do not get stored in the DCC++ BaseStation
  * Each group does not effect the other groups. To turn on F0 and F22 you would need to send two separate commands to the DCC++ BaseStation. One for F0 on and another for F22 on. 
 
-####STATIONARY ACCESSORY DECODERS & TURNOUTS####
+#### STATIONARY ACCESSORY DECODERS & TURNOUTS ####
 
 DCC++ BASE STATION can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).  
 
@@ -170,7 +170,7 @@ All decoders that are not in a engine are accessory decoders including turnouts.
 
 Besides being defined all turnouts, as well as any other DCC accessories connected in this fashion, can always be operated using the DCC BASE STATION Accessory command:
 
-#####You Controlling a Accessory Decoder** with   **< a ADDRESS SUBADDRESS ACTIVATE >#####
+##### You Controlling a Accessory Decoder** with   **< a ADDRESS SUBADDRESS ACTIVATE > #####
   * <: Begin DCC++ command
   * a (lower case a) this command is for a Acessory Decoder
   * ADDRESS:  the primary address of the decoder controlling this turnout (0-511)
@@ -180,7 +180,7 @@ Besides being defined all turnouts, as well as any other DCC accessories connect
 
  * However, this general command simply sends the appropriate DCC instruction packet to the main tracks to operate connected accessories. It does not store or retain any information regarding the current status of that accessory.
 
-#####Defining (Setting up) a Turnout#####
+##### Defining (Setting up) a Turnout #####
 
 To have the DCC++ BaseStation store and retain the direction of DCC-connected turnouts, as well as automatically invoke the required < a > command as needed, first define/edit/delete such turnouts using the following variations of the "T" command:
 
@@ -222,7 +222,7 @@ You can also **ERASE everything (turnouts, sensors, and outputs)** stored in the
   >  * >: End DCC++ command  
   >  DCC++ should return **< O >**  Meaning Command Successful  
 
-#####Controlling a Defined Turnout#####
+##### Controlling a Defined Turnout #####
   * Sets turnout ID to either the "thrown"(turned) or "unthrown"(straight) position  
   * The Turnout format is **< T ID THROW >**  
   * ID: The numeric ID (0-32767) That you gave the turnout to control when you defined it. 
@@ -241,7 +241,7 @@ You can also **ERASE everything (turnouts, sensors, and outputs)** stored in the
   >  DCC++ should return **< H 10 1 >**  Meaning Command Throw turnout 10 was Successful 
   >  NOTE: This return may list all turnouts and thier directions
 
-####SENSORS####
+#### SENSORS ####
 
 DCC++ BaseStation supports Sensor inputs that can be connected to any Aruidno Pin not in use by this program. Sensors can be of any type (infrared, magnetic, mechanical...). The only requirement is that when "activated" the Sensor must force the specified Arduino Pin LOW (i.e. to ground), and when not activated, this Pin should remain HIGH (i.e. 5V), or be allowed to float HIGH if use of the Arduino Pin's internal pull-up resistor is specified.  
 
@@ -274,7 +274,7 @@ All sensors defined as per above are repeatedly and sequentially checked within 
 
 Depending on whether the physical sensor is acting as an "event-trigger" or a "detection-sensor," you may decide to ignore the **< q ID >** return and only react to **< Q ID >** triggers.
 
-####ARDUINO OUTPUT PINS####
+#### ARDUINO OUTPUT PINS ####
 
 DCC++ BaseStation supports optional OUTPUT control of any unused Arduino Pins for custom purposes. Pins can be activited or de-activated. The default is to set ACTIVE pins HIGH and INACTIVE pins LOW. However, this default behavior can be inverted for any pin in which case ACTIVE=LOW and INACTIVE=HIGH.  
 
@@ -324,11 +324,11 @@ To change the state of outputs that have been defined use:
 
 When controlled as such, the Arduino updates and stores the direction of each output in EEPROM so that it is retained even without power. A list of the current states of each output in the form **< Y ID STATE >** is generated by DCC++ BaseStation whenever the **< s >** status command is invoked. This provides an efficient way of initializing the state of any outputs being monitored or controlled by a separate interface or GUI program.  
 
-###Engine Decoder Programming Commands###
+### Engine Decoder Programming Commands ###
 
-####PROGRAMMING-MAIN TRACK####
+#### PROGRAMMING-MAIN TRACK ####
 
-#####WRITE CV BYTE TO ENGINE DECODER ON MAIN TRACK#####
+##### WRITE CV BYTE TO ENGINE DECODER ON MAIN TRACK #####
 
 Writes, without any verification, a Configuration Variable BYTE to the decoder of an engine on the main operations track.  
 
@@ -340,7 +340,7 @@ Writes, without any verification, a Configuration Variable BYTE to the decoder o
 - **VALUE**: The value to be written to the Configuration Variable memory location (0-255)  
 - Returns: NONE
 
-#####WRITE CV BIT TO ENGINE DECODER ON MAIN TRACK#####
+##### WRITE CV BIT TO ENGINE DECODER ON MAIN TRACK #####
 
 Writes, without any verification, a single bit within a Configuration Variable BIT to the decoder of an engine on the main operations track.  
 
@@ -353,9 +353,9 @@ Writes, without any verification, a single bit within a Configuration Variable B
 - **VALUE**: the value of the bit to be written (0-1)  
  * Returns: NONE
 
-####PROGRAMMING-PROGRAMMING TRACK####
+#### PROGRAMMING-PROGRAMMING TRACK ####
 
-#####WRITE CV BYTE TO ENGINE DECODER ON PROGRAMMING TRACK#####
+##### WRITE CV BYTE TO ENGINE DECODER ON PROGRAMMING TRACK #####
 
 Writes, and then verifies, a Configuration Variable BYTE to the decoder of an engine on the programming track  
 
@@ -369,7 +369,7 @@ Writes, and then verifies, a Configuration Variable BYTE to the decoder of an en
  * Returns: **< r CALLBACKNUM|CALLBACKSUB|CV Value >**  
  * CV VALUE: Is a number from 0-255 as read from the requested CV, or -1 if verification read fails.  
 
-#####WRITE CV BIT TO ENGINE DECODER ON PROGRAMMING TRACK#####
+##### WRITE CV BIT TO ENGINE DECODER ON PROGRAMMING TRACK #####
 
 Writes, and then verifies, a Configuration Variable BIT to the decoder of an engine on the programming track  
 
@@ -384,7 +384,7 @@ Writes, and then verifies, a Configuration Variable BIT to the decoder of an eng
  * Returns: **< r CALLBACKNUM|CALLBACKSUB|CV BIT VALUE>**  
  * CV VALUE is a number from 0-1 as read from the requested CV bit, or -1 if verification read fails.  
 
-#####READ CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK#####
+##### READ CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK #####
 
 Reads a Configuration Variable from the decoder of an engine on the programming track.  
 
