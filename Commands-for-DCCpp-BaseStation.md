@@ -65,7 +65,7 @@ If the command was successful the serial monitor should reply with : **<T 1 20 1
  * current state of engine functions is not stored by the DCC++ BaseStation  
  * All functions Groups get set all at once per NMRA DCC standards  
 
-#####To set functions **F0-F4** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>**#####
+##### To set functions **F0-F4** on=(1) or off=(0): **<f CAB BYTE1 [BYTE2]>** #####
  *  < = Begin DCC++ command
  *  f = (lower case f) This command is for a CAB,s function ie: Lights, horn, bell  
  * CAB:  the short (1-127) or long (128-10293) address of the engine decoder
