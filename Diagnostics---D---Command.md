@@ -6,7 +6,7 @@ Since its not uncommon for user to have initial problems with configuring the Ba
 
 1. Remove the Motor Shield ---we are going to test just the Arduino first.  
 2. Download and install the most current version of [DCC++ Base Station](https://github.com/DccPlusPlus/BaseStation) (not the latest named release, which is about a week old, but rather the latest version with the new commit Date).  
-3.  Open the Serial Monitor Window in the Arduino IDE and establish communication with the Arduino.  
+3.  Open the Serial Monitor Window in the Arduino IDE and establish communication with the Arduino. You will need to set the serial data rate to 115200 baud. If you see gibberish instead of English, this is probably set  incorrectly.  
 
 ###Testing the Arduino and Base Station code###
 
